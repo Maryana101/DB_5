@@ -49,7 +49,7 @@ where p.payment_date >= "2005-07-30" and p.payment_date < DATE_ADD("2005-07-30",
 ```sql
 create index pay_date_idx USING BTREE  ON payment(payment_date);
 ```
-Время выполнения = 4.83 мс
+Время выполнения = 3.94 мс
 
 ![](./img/4_.png)
 
