@@ -40,6 +40,7 @@ select distinct concat(c.last_name, ' ', c.first_name), sum(p.amount) over (part
 from payment p 
 join rental r on  p.payment_date = r.rental_date
 join customer c on r.customer_id = c.customer_id
+join inventory i on i.inventory_id = r.inventory_id
 where p.payment_date >= "2005-07-30" and p.payment_date < DATE_ADD("2005-07-30", INTERVAL 1 DAY) 
 ```
 
